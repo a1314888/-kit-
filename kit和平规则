@@ -1,11 +1,11 @@
-【程序规则】
+[RoutingRule]
 #奔放规则#
 #百度验证#
 DOMAIN-KEYWORD,s3.bmp.ovh,DIRECT
 DOMAIN-KEYWORD,baidu,PROXY
-关键词，宾，直接
-郝道明-基沃德，直接
-东莞市嘉章区关键字
+DOMAIN-KEYWORD,bin,DIRECT
+DOMAIN-KEYWORD,hao,DIRECT
+DOMAIN-KEYWORD,jiazhang,DIRECT
 DOMAIN-KEYWORD,qlogo.cn,DIRECT
 DOMAIN-KEYWORD,download,DIRECT
 DOMAIN-KEYWORD,weixin.qq.com,DIRECT
@@ -13,12 +13,12 @@ DOMAIN-KEYWORD,ptlogin2.qq.com,DIRECT
 DOMAIN-KEYWORD,imgcache.qq.com,DIRECT
 DOMAIN-KEYWORD,openmobile.qq.com,DIRECT
 DOMAIN-KEYWORD,ap6.ssl.msdk.qq.com,DIRECT
-下来
-DOMAIN-KEYWORD,down.anticheatexpert.com，代理
-端口，5692，拒收
+#down#
+DOMAIN-KEYWORD,down.anticheatexpert.com,PROXY
+PORT,5692,REJECT
 
 #无心追踪
-卢阿·多曼-基沃德，直接
+DOMAIN-KEYWORD,lua,DIRECT
 
 #游戏更新
 DOMAIN,down.qq.com,DIRECT
@@ -26,61 +26,61 @@ DOMAIN,down.qq.com,DIRECT
 #图片加载
 DOMAIN-KEYWORD,superbed,DIRECT
 DOMAIN-KEYWORD,imgdb,DIRECT
-关键词，图像，直接
+DOMAIN-KEYWORD,image,DIRECT
 DOMAIN-KEYWORD,ax1x,DIRECT
 #杂项拦截
-域名-关键字，输入，拒绝
+DOMAIN-KEYWORD,imtmp,REJECT
 DOMAIN-KEYWORD,tencent,REJECT
 #端口代理#
-端口号443，拒绝
-端口，80，拒绝
-端口，15692，拒收
-端口，10012，代理
-端口，20001，代理
-17500直接端口
-端口，5692，拒收
-端口，20297，拒绝
-港口，17005，拒绝
-端口，6099，拒绝
-港口，1884年，拒绝
-端口，8080，拒绝
-端口，8013，拒绝
-端口，8081，拒绝
-港口，17005，拒绝
-端口，3013，拒绝
-端口，31003，拒绝
-端口号10013-10086，拒收
-出口，50000，拒收
-最终，直接
+PORT,443,REJECT
+PORT,80,REJECT
+PORT,15692,REJECT
+PORT,10012,PROXY
+PORT,20001,PROXY
+PORT,17500,DIRECT 
+PORT,5692,REJECT
+PORT,20297,REJECT
+PORT,17005,REJECT
+PORT,6099,REJECT
+PORT,1884,REJECT
+PORT,8080,REJECT
+PORT,8013,REJECT
+PORT,8081,REJECT
+PORT,17005,REJECT
+PORT,3013,REJECT
+PORT,31003,REJECT
+PORT,10013-10086,REJECT
+PORT,50000,REJECT 
+FINAL,DIRECT
 
-【路由域名策略】
-助理
+[RoutingDomainStrategy]
+AsIs
 
-【自由域名策略】
-助理
+[FreedomDomainStrategy]
+AsIs
 
-【当地政策】
-缓冲器大小=4096
-联系人=300
-仅下载链接=0
-握手=4
-仅更新=0
+[LocalPolicy]
+bufferSize = 4096
+connIdle = 300
+downlinkOnly = 0
+handshake = 4
+uplinkOnly = 0
 
 [DnsServer]
 
-【丹麦规则】
+[DnsRule]
 
 [DnsHost]
 
 [DnsClientIp]
 
-【日志】
-对数级=无
+[Log]
+loglevel = none
 
-【应用虚拟化】
+[PerAppVpn]
 
-【应用模式】
+[PerAppMode]
 
-【应用许可协议】
+[PerAppAllow]
 
 [PerAppDisallow]
